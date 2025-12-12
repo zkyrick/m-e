@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá</title>
+    
+    <style>
+        body{
+            background-color: red;
+        }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            font-family: cursive;
+            padding-top: 50px;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -60px;
+        }
+        #não{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Boa Noite, mãe</h1>
+        <h2>Me manda um pix</h2>
+        <img src="https://media.tenor.com/Ez3RJJBzwfAAAAAM/rose-cute.gif" alt="">
+        <h2></h2>
+        <a href="https://www.youtube.com/watch?v=lygzydBMp6Q"><button id="sim"> 1 </button></a>
+        <button onmouseover="fuja()" id="não"> 2 </button>
+
+    </div>
+    <script>
+        function fuja(){
+            var btn = document.getElementById("não");
+            btn.style.position = "absolute";
+            var x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            var y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
